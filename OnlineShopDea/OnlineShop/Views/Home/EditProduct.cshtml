@@ -1,0 +1,65 @@
+﻿@using OnlineShop.Models
+@model Product
+
+
+<h2>Create a New Product @Model.Name</h2>
+<form action="/Home/EditProduct">
+
+	@Html.Hidden("ProductID")
+	@Html.HiddenFor(x => x.ProductID)
+
+
+	<input type="hidden" name="productID" value="@Model.ProductID" />
+
+
+
+	<div>
+		<label for="Name">Name:</label>
+		<input type="text" name="Name" id="Name" value="@Model.Name" />
+	</div>
+
+	<div>
+		<label for="ProductNumber">Product Number:</label>
+		<input type="text" 
+			   name="ProductNumber" 
+			   id="ProductNumber" 
+			   value="@Model.ProductNumber"/>
+	</div>
+	<div>
+		<label for="Color">Color:</label>
+		@Html.TextBoxFor(x => x.Color)
+	</div>
+	<div>
+		<label for="StandartCost">Standart Cost:</label>
+		@Html.TextBoxFor(x => x.StandardCost)
+	</div>
+	<div>
+		<label for="ListPrice">List Price: </label>
+		@Html.TextBoxFor(x => x.ListPrice)
+
+		@Html.ValidationMessageFor(x => x.ListPrice)
+	</div>
+	
+	<div class="form-group">
+		<div class=" col-md-offset-2 col-md-10">
+			<input type="submit" value="Save Changes" class="btn btn-default" />
+		</div>
+	</div>
+</form>
+
+@Html.ValidationSummary()
+
+<style>
+	form label {
+		width: 200px;
+	}
+</style>
+
+<hr />
+<div>
+	<a href="/Home/Index">Back to Products Page</a>
+</div>
+
+@section Scripts {
+	@Scripts.Render("~/bundles/jqueryval")
+}
