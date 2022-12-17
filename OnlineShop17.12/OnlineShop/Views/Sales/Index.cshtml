@@ -1,0 +1,44 @@
+﻿@using OnlineShop.Models
+
+@model SalesOrderHeaderDto
+
+<h1>Sales</h1>
+
+<table class="table table-striped">
+    <tr>
+        <th>Year</th>
+        <th>Category</th>
+        <th>Sales Amount</th>
+        <th></th>
+    </tr>
+    @*@foreach (var item in Model.SalesOrderHeaderDto)
+    {
+        <tr class="rowItem">
+            <td>@item.Year</td>
+            <td>@item.Category</td>
+            <td>@item.SalesAmount.ToString("C")</td>
+            <td>@item.PercentableMax.ToString("N2") % 
+                <div class="bar" style="width:@(3*(int)item.PercentableMax)px"></div>
+            </td>
+        </tr>
+    }*@
+    <tr>
+        <th>Totals:</th>
+        <th></th>
+       @* <th>@Model.Total.ToString("C")</th>*@
+        <th></th>
+    </tr>
+</table>
+
+<style>
+    .bar{
+        background-color: lightblue;
+        border: solid 1px darkblue;
+        height: 20px;
+        display:inline-block;
+    }
+    .rowItem
+    {
+        width: 100px;
+    }
+</style>

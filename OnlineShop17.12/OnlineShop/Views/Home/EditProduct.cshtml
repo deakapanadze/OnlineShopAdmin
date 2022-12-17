@@ -1,0 +1,70 @@
+﻿
+@using OnlineShop.Models
+@model ProductDto
+
+
+<h2>Edit The Product [ @Model.Name ]</h2>
+
+<form action="/Home/EditProduct" method="post" >
+
+    <input type="hidden" name="productID" value="@Model.ProductID" />
+
+    <div>
+        <label for="Name"> Name: </label>
+        @Html.TextBoxFor(x => x.Name)
+        @Html.ValidationMessageFor(x => x.Name)
+    </div>
+
+    <div>
+        <label for="ProductNumber"> Product Number: </label>
+        @Html.TextBoxFor(x => x.ProductNumber)
+        @Html.ValidationMessageFor(x => x.ProductNumber)
+    </div>
+
+    <div>
+        <label for="Color"> Color: </label>
+        @Html.TextBoxFor(x => x.Color)
+    </div>
+
+    <div>
+        <label for="StandardCost">Standard Cost: </label>
+        @Html.TextBoxFor(x => x.StandardCost)
+        @Html.ValidationMessageFor(x => x.ListPrice)
+    </div>
+
+    <div>
+        <label for="ListPrice"> List Price: </label>
+        @Html.TextBoxFor(x => x.ListPrice)
+
+        @Html.ValidationMessageFor(x => x.ListPrice)
+
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Save Changes" class="btn btn-default" />
+        </div>
+    </div>
+
+</form>
+
+@Html.ValidationSummary()
+
+<style>
+    form label
+    {
+        width: 200px;
+    }
+</style>
+
+<hr />
+<div>
+    <a href="/Home/Index">Back to Products Page</a>
+</div>
+
+
+@*
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+*@

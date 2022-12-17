@@ -1,0 +1,16 @@
+﻿.productRow:hover {
+    background-color: antiquewhite !important;
+}
+.productRow {
+}
+
+.productRow:hover .editButton {
+    display: inline;
+}
+
+.editButton {
+    display: none;
+    margin: 1px;
+    padding: 5px;
+    width: 40px;
+}

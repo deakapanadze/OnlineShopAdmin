@@ -1,0 +1,28 @@
+﻿@model List<Customer>
+
+
+<h1>Customers</h1>
+<form method="get">
+    Max:<input type="number" name="max"/>
+    Filter first name: <input name="firstname" />
+    <button class="btn-primary btn">Filter</button>
+</form>
+
+<table class="table table-striped table-bordered">
+    @foreach(var customer in Model){
+
+        <tr>
+            <td>@customer.CustomerId</td>
+            <td>@customer.FirstName</td>
+            <td>@customer.LastName</td>
+            <td>@customer.EmailAddress</td>
+            <td>@customer.Phone</td>
+            <td>
+                <a href="/Customers/Details" class="btn-primary btn">Details</a>
+            </td>
+        </tr>
+
+    }
+
+
+</table>

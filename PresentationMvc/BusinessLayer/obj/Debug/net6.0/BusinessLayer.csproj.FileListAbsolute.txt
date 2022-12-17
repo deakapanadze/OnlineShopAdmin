@@ -1,0 +1,5 @@
+D:\projects\PresentationMvc\BusinessLayer\obj\Debug\net6.0\BusinessLayer.csproj.AssemblyReference.cache
+D:\projects\PresentationMvc\BusinessLayer\obj\Debug\net6.0\BusinessLayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\projects\PresentationMvc\BusinessLayer\obj\Debug\net6.0\BusinessLayer.AssemblyInfoInputs.cache
+D:\projects\PresentationMvc\BusinessLayer\obj\Debug\net6.0\BusinessLayer.AssemblyInfo.cs
+D:\projects\PresentationMvc\BusinessLayer\obj\Debug\net6.0\BusinessLayer.csproj.CoreCompileInputs.cache

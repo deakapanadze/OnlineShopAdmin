@@ -28,7 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("პროდუქტი");
+			System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("პროდუქტი");
 			this.treeView_ProducrGroup = new System.Windows.Forms.TreeView();
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
 			this.button1 = new System.Windows.Forms.Button();
@@ -44,19 +44,19 @@
 			// 
 			// treeView_ProducrGroup
 			// 
-			this.treeView_ProducrGroup.Location = new System.Drawing.Point(12, 35);
+			this.treeView_ProducrGroup.Location = new System.Drawing.Point(12, 63);
 			this.treeView_ProducrGroup.Name = "treeView_ProducrGroup";
-			treeNode2.Name = "Node0";
-			treeNode2.Text = "პროდუქტი";
+			treeNode1.Name = "Node0";
+			treeNode1.Text = "პროდუქტი";
 			this.treeView_ProducrGroup.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode2});
+            treeNode1});
 			this.treeView_ProducrGroup.Size = new System.Drawing.Size(249, 500);
 			this.treeView_ProducrGroup.TabIndex = 0;
 			// 
 			// dataGridView1
 			// 
 			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dataGridView1.Location = new System.Drawing.Point(267, 35);
+			this.dataGridView1.Location = new System.Drawing.Point(267, 63);
 			this.dataGridView1.Name = "dataGridView1";
 			this.dataGridView1.RowHeadersWidth = 51;
 			this.dataGridView1.RowTemplate.Height = 24;
@@ -67,45 +67,45 @@
 			// 
 			this.button1.Location = new System.Drawing.Point(267, 6);
 			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(75, 23);
+			this.button1.Size = new System.Drawing.Size(77, 38);
 			this.button1.TabIndex = 2;
-			this.button1.Text = "button1";
+			this.button1.Text = "save";
 			this.button1.UseVisualStyleBackColor = true;
 			// 
 			// button2
 			// 
 			this.button2.Location = new System.Drawing.Point(364, 6);
 			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(75, 23);
+			this.button2.Size = new System.Drawing.Size(77, 38);
 			this.button2.TabIndex = 3;
-			this.button2.Text = "button2";
+			this.button2.Text = "Edit";
 			this.button2.UseVisualStyleBackColor = true;
 			// 
 			// button3
 			// 
 			this.button3.Location = new System.Drawing.Point(456, 6);
 			this.button3.Name = "button3";
-			this.button3.Size = new System.Drawing.Size(75, 23);
+			this.button3.Size = new System.Drawing.Size(83, 38);
 			this.button3.TabIndex = 3;
-			this.button3.Text = "button2";
+			this.button3.Text = "Delete";
 			this.button3.UseVisualStyleBackColor = true;
 			// 
 			// button4
 			// 
 			this.button4.Location = new System.Drawing.Point(953, 6);
 			this.button4.Name = "button4";
-			this.button4.Size = new System.Drawing.Size(75, 23);
+			this.button4.Size = new System.Drawing.Size(75, 38);
 			this.button4.TabIndex = 4;
-			this.button4.Text = "button4";
+			this.button4.Text = "update";
 			this.button4.UseVisualStyleBackColor = true;
 			// 
 			// btn_Save
 			// 
 			this.btn_Save.Location = new System.Drawing.Point(12, 6);
 			this.btn_Save.Name = "btn_Save";
-			this.btn_Save.Size = new System.Drawing.Size(51, 23);
+			this.btn_Save.Size = new System.Drawing.Size(51, 38);
 			this.btn_Save.TabIndex = 5;
-			this.btn_Save.Text = "button5";
+			this.btn_Save.Text = "save";
 			this.btn_Save.UseVisualStyleBackColor = true;
 			this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
 			// 
@@ -113,9 +113,9 @@
 			// 
 			this.btn_edit.Location = new System.Drawing.Point(69, 6);
 			this.btn_edit.Name = "btn_edit";
-			this.btn_edit.Size = new System.Drawing.Size(61, 23);
+			this.btn_edit.Size = new System.Drawing.Size(62, 38);
 			this.btn_edit.TabIndex = 6;
-			this.btn_edit.Text = "button6";
+			this.btn_edit.Text = "Edit";
 			this.btn_edit.UseVisualStyleBackColor = true;
 			this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
 			// 
@@ -123,9 +123,9 @@
 			// 
 			this.btn_delete.Location = new System.Drawing.Point(137, 6);
 			this.btn_delete.Name = "btn_delete";
-			this.btn_delete.Size = new System.Drawing.Size(64, 23);
+			this.btn_delete.Size = new System.Drawing.Size(65, 38);
 			this.btn_delete.TabIndex = 7;
-			this.btn_delete.Text = "button7";
+			this.btn_delete.Text = "Delete";
 			this.btn_delete.UseVisualStyleBackColor = true;
 			this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
 			// 
@@ -133,14 +133,14 @@
 			// 
 			this.txt_node.Location = new System.Drawing.Point(557, 6);
 			this.txt_node.Name = "txt_node";
-			this.txt_node.Size = new System.Drawing.Size(100, 22);
+			this.txt_node.Size = new System.Drawing.Size(107, 22);
 			this.txt_node.TabIndex = 8;
 			// 
 			// ProductMainform
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(1040, 547);
+			this.ClientSize = new System.Drawing.Size(1040, 615);
 			this.Controls.Add(this.txt_node);
 			this.Controls.Add(this.btn_delete);
 			this.Controls.Add(this.btn_edit);

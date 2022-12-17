@@ -1,0 +1,87 @@
+﻿@using OnlineShop.Models
+
+@model ProductInformationDto
+
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<link href="~/Content/ProductsPage.css" rel="stylesheet" />
+
+<div class="alert-info large">
+    <h1>Products</h1>
+</div>
+
+<hr />
+
+<form action="/Home/UpdatePrices" method="post">
+    <input type="text" name="percentage" id="percentage" /> %
+    <button type="submit">Update Prices</button>
+</form>
+
+<table class="table table-striped">
+
+    <tr>
+        <th>Product</th>
+        <th>Category Name</th>
+        <th>List Price</th>
+        <th>Product Number</th>
+        <th>Weight</th>
+        <th>Color</th>
+        <th>Modified Date</th>
+        <th style="width:95px"> &nbsp; </th>
+    </tr>
+
+    @foreach (ProductDto product in Model.Products)
+    {
+        <tr class="productRow" id="product_@product.ProductID">
+            <td>@product.Name</td>
+            <td>@(product.ProductCategory?.Name)</td>
+            <td>@product.ListPrice</td>
+            <td>@product.ProductNumber</td>
+            <td>@(product.Weight.HasValue ? product.Weight.Value.ToString("N2") : "0.00")</td>
+            <td>@product.Color</td>
+            <td>@product.ModifiedDate</td>
+            <td>
+                <a class="btn btn-primary editButton" href="/Home/EditProduct?productID=@product.ProductID">
+                    Edit
+                </a>
+                <Button class="btn btn-danger editButton deleteButton"
+                   productId="@product.ProductID"
+                   data-productId="@product.ProductID">X</Button>
+            </td>
+        </tr>
+    }
+
+</table>
+
+<script>
+
+    function errorOnDeletingProduct(result) {
+        toastr.error("Server error: " + result);
+        console.log(result);
+    }
+
+    function deleteProductById(id) {
+
+        var url = "/Home/DeleteProduct?productID=" + id;
+
+        $.post(url, {},
+            function (result) {
+                if (result.Successful) {
+                    toastr.success('Product Deleted!');
+                    $("#product_"+id).fadeOut();
+                }
+                else {
+                    toastr.error(result.Error);
+                }
+            })
+            .fail(errorOnDeletingProduct);
+    }
+
+    $(".deleteButton").click(function () {
+        var id = $(this).attr("productID");
+        deleteProductById(id);
+    });
+
+</script>
+
+<a href="/Home/CreateProduct">Create a New Product</a>
+
